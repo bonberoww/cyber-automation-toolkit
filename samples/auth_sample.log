@@ -1,0 +1,13 @@
+Mar 21 09:58:12 srv-lab01 sshd[2101]: Accepted publickey for alessandro from 192.168.56.10 port 52114 ssh2
+Mar 21 09:58:20 srv-lab01 sudo[2110]: alessandro : TTY=pts/0 ; PWD=/home/alessandro ; USER=root ; COMMAND=/usr/bin/apt update
+Mar 21 10:02:01 srv-lab01 sshd[2201]: Invalid user admin from 198.51.100.23 port 41522
+Mar 21 10:02:02 srv-lab01 sshd[2202]: Invalid user oracle from 198.51.100.23 port 41530
+Mar 21 10:03:10 srv-lab01 sshd[2210]: Failed password for root from 203.0.113.45 port 50122 ssh2
+Mar 21 10:03:11 srv-lab01 sshd[2211]: Failed password for root from 203.0.113.45 port 50124 ssh2
+Mar 21 10:03:12 srv-lab01 sshd[2212]: Failed password for root from 203.0.113.45 port 50130 ssh2
+Mar 21 10:03:13 srv-lab01 sshd[2213]: Failed password for root from 203.0.113.45 port 50141 ssh2
+Mar 21 10:03:14 srv-lab01 sshd[2214]: Failed password for root from 203.0.113.45 port 50152 ssh2
+Mar 21 10:03:15 srv-lab01 sshd[2215]: Failed password for root from 203.0.113.45 port 50160 ssh2
+Mar 21 10:03:19 srv-lab01 sshd[2216]: Accepted password for root from 203.0.113.45 port 50171 ssh2
+Mar 21 10:04:02 srv-lab01 su[2230]: FAILED SU (to root) www-data on pts/1
+Mar 21 10:05:40 srv-lab01 kernel: [12345.678] IPTABLES DROP IN=eth0 SRC=198.51.100.23 DST=192.168.56.20 PROTO=TCP DPT=3389

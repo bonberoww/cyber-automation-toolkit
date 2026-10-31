@@ -1,0 +1,7 @@
+=== Port Scan Report ===
+Target    : scanme.nmap.org
+Timestamp : 2026-03-21 17:50:00.000000
+Open ports: 2
+
+  [OPEN] 22 / ssh
+  [OPEN] 80 / http

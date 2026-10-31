@@ -71,7 +71,7 @@ def save_report(results: dict) -> str:
     os.makedirs(REPORT_DIR, exist_ok=True)
     filename = f"{REPORT_DIR}/dns_enum_{results['domain']}_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
 
-    with open(filename, "w") as f:
+    with open(filename, "w", encoding="utf-8") as f:
         f.write(f"=== DNS Enumeration Report ===\n")
         f.write(f"Domain    : {results['domain']}\n")
         f.write(f"Timestamp : {results['timestamp']}\n\n")

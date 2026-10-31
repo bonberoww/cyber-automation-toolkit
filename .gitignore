@@ -1,0 +1,21 @@
+# Rapports de scan réels : restent en local, jamais publiés
+reports/*
+!reports/example_*.txt
+
+# Secrets et identifiants
+.env
+.env.*
+!.env.example
+**/login.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Divers
+.vscode/
+.idea/
+*.log
+!samples/*.log

@@ -15,7 +15,7 @@ SUSPICIOUS_PATTERNS = {
     "Sudo utilisé"           : r"sudo:.+COMMAND=",
     "Utilisateur inconnu"    : r"Invalid user .+ from",
     "Scan de ports détecté"  : r"kernel.*IPTABLES.*DROP",
-    "Tentative su échouée"   : r"su: FAILED SU",
+    "Tentative su échouée"   : r"su(\[\d+\])?: FAILED SU",
     "Segmentation fault"     : r"segfault at",
     "Erreur auth PAM"        : r"PAM: Authentication failure",
     "Connexion SSH réussie"  : r"Accepted (password|publickey) for .+ from",
@@ -40,7 +40,7 @@ def analyze_log(filepath: str) -> dict:
 
     print(f"\n{Fore.CYAN}[*] Analyse de : {filepath}{Style.RESET_ALL}\n")
 
-    with open(filepath, "r", errors="ignore") as f:
+    with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
         lines = f.readlines()
 
     print(f"{Fore.CYAN}[*] {len(lines)} lignes à analyser...{Style.RESET_ALL}\n")
@@ -93,7 +93,7 @@ def save_report(results: dict) -> str:
     ts       = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{REPORT_DIR}/log_monitor_{ts}.txt"
 
-    with open(filename, "w") as f:
+    with open(filename, "w", encoding="utf-8") as f:
         f.write(f"=== Log Monitor Report ===\n")
         f.write(f"File      : {results['file']}\n")
         f.write(f"Timestamp : {results['timestamp']}\n")
